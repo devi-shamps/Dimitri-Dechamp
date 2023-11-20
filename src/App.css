@@ -2,32 +2,79 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-h6 {
+  font-size: 12px;
+  font-family: NeueMontreal-Regular;
+  line-height: 1.4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-description {
+  margin: 20px 0px;
+  font-size: 12px;
+  line-height: 140%;
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.51);
+  letter-spacing: 3px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  top: 46px;
+  padding: 0px 3vw;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 2vh;
+  width: 100vw;
+  position: fixed;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App-header a img {
+  margin: 0px 0px 4px 1px;
+  width: 150px;
+}
+.App-header-logo {
+  font-size: 30px;
+}
+.App-header nav {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.App-header nav a {
+  margin-left: 24px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.51);
+}
+.mail a img{
+  top: 1vw;
+  width: 50%;
 }
 
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-container-logo {
+  height: 40vmin;
+  pointer-events: none;
+  opacity: 40%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-container-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes animation-reel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +82,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.my-skills-main-reel {
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.my-skills-reel {
+  margin-top: 300px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  width: fit-content;
+  will-change: transform;
+  -webkit-animation: animation-reel 60s linear infinite;
+  animation: animation-reel 60s linear infinite;
+}
+.reel-item {
+  font-weight: 400;
+  color: black;
+  font-size: 180px;
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ImageComponent.css */
+.scrolling-images-container {
+  position: relative;
+  height: 200vh; /* Assurez-vous que le conteneur a une hauteur suffisante pour permettre le défilement */
+}
+
+.scrolling-image {
+  position: absolute;
+  width: 100px; /* Ajustez la taille de vos images selon vos besoins */
+  height: 100px; /* Ajustez la taille de vos images selon vos besoins */
+  background-color: #3498db; /* Couleur de fond des images, ajustez selon vos besoins */
+  border-radius: 50%; /* Pour créer des images rondes, ajustez selon vos besoins */
+  transition: transform 0.3s ease; /* Ajoutez une transition pour un effet plus fluide */
 }
